@@ -1,6 +1,6 @@
 def value_check(value):
     try:
-        value = float(value)
+        value = int(value)
         return value
     except ValueError:
         print('Неверный формат ввода')
@@ -10,13 +10,10 @@ def value_check(value):
 
 
 print('Введите число:')
-user_value = str(value_check(input()))
-value_sum = 0
+number_n = value_check(input())
+list = [1]
 
-for i in clear_value:
-    if i == '.':
-        value_sum += 0
-    else:
-        value_sum += int(i)
+for i in range(2, number_n+1):
+    list.append(i*(list[i-2]))
 
-print(value_sum)
+print(list)
