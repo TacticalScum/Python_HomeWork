@@ -10,9 +10,12 @@ def value_check(value):
 
 print('Введите число:')
 number_n = value_check(input())
-list = [1]
+sum = 0
+list = []
 
-for i in range(2, number_n+1):
-    list.append(i*(list[i-2]))
+for i in range(1, number_n+1):
+    list.append(round(((1+1/i)**i), 3))
+    sum = sum + list[i-1]
 
 print(list)
+print(sum)
