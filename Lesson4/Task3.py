@@ -2,7 +2,7 @@ import random
 import os
 
 def file_create(name: str):
-    
+
     indexes = {"0": "\u2070",
                "1": "\u00B9",
                "2": "\u00B2",
